@@ -10,7 +10,7 @@ function SearchBar() {
     <Paper component="form"
     onSubmit={() => {}}
     sx={{
-      borderRaduis: 20, border: '1px solid #e3e3e3', pl: 2, mr: { sm: 5 }
+      borderRaduis: 20, border: '1px solid #e3e3e3', pl: 2, mr: { sm: 5 }, boxShadow: 'none'
     }}>
       <input className="search-bar"
       placeholder="Search..."
