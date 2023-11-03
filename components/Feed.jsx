@@ -3,14 +3,23 @@ import { Box, Stack, Typography } from '@mui/material'
 import { Height } from '@mui/icons-material'
 import Sidebar from './Sidebar'
 import Videos from './Videos'
+import { fetchFromAPI } from './utils/fetchFromApi'
 
 
 function Feed() {
+  const [selectedCatergory, setSelectedCategory] = useState('New')
+
+  useEffect(() => {
+    fetchFromAPI( `search?pat=snippet&q=${selectedCatergory}` )
+  }, [ selectedCatergory ])
+
   return (
     <Stack sx={{ flexDirection: { sx: 'column', md: 'row'} }}>
       <Box sx={{ height: { sx: 'auto', md: '100vh'}, borderRight: '1px solid #d3d3d3', px: { sx: 0, md: 2} }}>
 
-        <Sidebar />
+        <Sidebar
+        selectedCatergory={selectedCatergory}
+        setSelectedCategory={setSelectedCategory} />
 
         <Typography className='copyright' variant='body2' sx={{ mt: 1.5, color: '#fff' }}>
           Copyright 2023 Pau/franciss MP2
