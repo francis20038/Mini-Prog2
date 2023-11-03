@@ -2,12 +2,11 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Paper, IconButton} from '@mui/material';
 import { Search } from '@mui/icons-material';
-import { red } from "@mui/material/colors";
 
 
 function SearchBar() {
   return (
-    <Paper component="form"
+    <Paper component = "form"
     onSubmit={() => {}}
     sx={{
       borderRaduis: 20, border: '1px solid #e3e3e3', pl: 2, mr: { sm: 5 }, boxShadow: 'none'
@@ -16,7 +15,7 @@ function SearchBar() {
       placeholder="Search..."
       value=""
       onChange={() => {}}/>
-      <IconButton type="submit" sx={{ p: '10px', color: 'red'}}>
+      <IconButton type="submit" sx={{ p: '10px', color: '#808080'}}>
         <Search />
       </IconButton>
     </Paper>
