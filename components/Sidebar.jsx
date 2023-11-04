@@ -6,8 +6,8 @@ import { categories } from './utils/constant'
 function Sidebar({ selectedCategory, setSelectedCategory }) {
   return (
     <Stack direction="row"
-    sx={{ overflowY: "auto", height: { sx: 'auto', md: '95%' }, 
-    flexDirection: { md: 'column' } }}>
+    sx={{ overflowY: "auto", height: { sx: "auto", md: "95%" }, 
+    flexDirection: { md: "column" } }}>
 
         {categories.map((category) => (
             <button
@@ -25,4 +25,4 @@ function Sidebar({ selectedCategory, setSelectedCategory }) {
   )
 }
 
-export default Sidebar
+export default Categories
