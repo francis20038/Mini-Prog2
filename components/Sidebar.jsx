@@ -12,12 +12,12 @@ function Sidebar({ selectedCategory, setSelectedCategory }) {
         {categories.map((category) => (
             <button
             className="category-btn"
-            onClick={()=> selectedCategory(category.name)}
-            style={{ background: category.name === selectedCategory && '#FC1503', color: 'white' }}
+            onClick={() => setSelectedCategory(category.name)}
+            style={{ background: category.name === selectedCategory && '#FC1503', }}
             key={category.name}>
 
-                <span style={{ color: category.name === selectedCategory ? 'white' : 'red', marginRight: '15px'}}>{category.icon}</span>
-                <span style={{ opacity: category.name === selectedCategory ? '1' : '0.8', marginRight: '15px'}}>{category.name}</span>
+                <span style={{ color: category.name === selectedCategory ? 'white' : 'red', marginRight: '15px'}}> {category.icon} </span>
+                <span style={{ opacity: category.name === selectedCategory ? '1' : '0.8', marginRight: '15px'}}> {category.name} </span>
 
             </button>
         ))}
@@ -25,4 +25,4 @@ function Sidebar({ selectedCategory, setSelectedCategory }) {
   )
 }
 
-export default Categories
+export default Sidebar
